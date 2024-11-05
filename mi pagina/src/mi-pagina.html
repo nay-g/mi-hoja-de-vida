@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="inicio">
+        <button onclick="mostrarHojaDeVida()">Inicio</button>
+    </div>
+
+    <div class="container" id="hojaDeVida" style="display: none;">
+        <div class="left-column">
+            <img src="img/Captura de pantalla 2024-11-05 143033.png" alt="Foto de perfil" class="profile-picture">
+
+            <div class="section profile">
+                <h2>PERFIL</h2>
+                <p>Naymar Guerra, Programador web con un mes de experiencia en el desarrollo de 
+                    aplicaciones web dinámicas y responsivas. Experto en HTML, CSS, JavaScript, 
+                    con un enfoque en la optimización de la experiencia del usuario y el rendimiento del sitio. Buscando contribuir 
+                    con habilidades técnicas y de resolución de problemas en un entorno colaborativo.</p>
+            </div>
+
+            <div class="languages">
+                <h2>IDIOMAS</h2>
+                <p>Español: Nativo</p>
+                <p>Inglés: Avanzado</p>
+                <p>Italiano: Medio</p>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <h1>Naymar Guerra</h1>
+            <h3>Estudiante de Sistema</h3>
+
+            <button onclick="mostrarOcultar('contactSection')">Mostrar/Ocultar Contacto</button>
+            <button onclick="mostrarOcultar('experienceSection')">Mostrar/Ocultar Experiencia</button>
+            <button onclick="mostrarOcultar('educationSection')">Mostrar/Ocultar Estudios</button>
+            <button onclick="mostrarOcultar('skillsSection')">Mostrar/Ocultar Habilidades</button>
+
+            <div class="section contact" id="contactSection" style="display: none;">
+                <h2>CONTACTO</h2>
+                <form id="contactForm" onsubmit="return validarFormulario()">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span id="errorNombre" class="error"></span>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="errorEmail" class="error"></span>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <span id="errorMensaje" class="error"></span>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="section experience" id="experienceSection" style="display: none;">
+                <h2>EXPERIENCIA</h2>
+                <h4>Estudiante</h4>
+                <p>Abril - Junio 2022</p>
+                <ul>
+                    <li>Desarrollé y mantuve aplicaciones web utilizando HTML, CSS y JavaScript, mejorando la usabilidad y la accesibilidad.</li>
+                    <li>Optimicé el rendimiento del sitio web, logrando una reducción del [porcentaje]% en los tiempos de carga.</li>
+                </ul>
+            </div>
+
+            <div class="section education" id="educationSection" style="display: none;">
+                <h2>ESTUDIOS</h2>
+                <p>2022 - Seccional Barranquilla - Universidad Libre</p>
+                <p>2024 - Seccional Barranquilla - Universidad Libre</p>
+            </div>
+
+            <div class="section skills" id="skillsSection" style="display: none;">
+                <h2>HABILIDADES</h2>
+                <div class="skill">
+                    <p>Lenguajes de Programación: HTML, CSS, JavaScript, [otros lenguajes como PHP, Python]</p>
+                    <div class="bar"><div class="level" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Frameworks y Librerías: React, Angular, [otros frameworks]</p>
+                    <div class="bar"><div class="level" style="width: 60%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
